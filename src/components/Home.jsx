@@ -59,7 +59,7 @@ const Home = ({ selectedCategory }) => {
   return (
     <>
       <div
-        className="grid"
+        className="grid vh-100"
         style={{
           marginTop: "64px",
           display: "grid",
