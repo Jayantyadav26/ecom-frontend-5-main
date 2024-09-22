@@ -19,11 +19,12 @@ const Home = ({ selectedCategory }) => {
   useEffect(() => {
     if (data && data.length > 0) {
       const fetchImagesAndUpdateProducts = async () => {
+        console.log(`here: ${import.meta.env.VITE_API_URL}`);
         const updatedProducts = await Promise.all(
           data.map(async (product) => {
             try {
               const response = await axios.get(
-                `http://localhost:8080/api/product/${product.id}/image`,
+                `${import.meta.env.VITE_API_URL}/api/product/${product.id}/image`,
                 { responseType: "blob" }
               );
               const imageUrl = URL.createObjectURL(response.data);
