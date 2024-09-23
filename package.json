@@ -31,5 +31,14 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "sass": "^1.74.1",
     "vite": "^5.2.8"
-  }
+  },
+  
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ]
+  
+  
 }
