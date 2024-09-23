@@ -36,7 +36,7 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
       setShowSearchResults(true)
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/products/search?keyword=${value}`
+        `${import.meta.env.VITE_API_URL}/api/product/search?keyword=${value}`
       );
       setSearchResults(response.data);
       setNoResults(response.data.length === 0);
@@ -108,7 +108,7 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
         <nav className="navbar navbar-expand-lg fixed-top mb-5">
           <div className="container-fluid">
             <a className="navbar-brand" href="https://silver-florentine-412989.netlify.app/">
-              ShoeKart
+              ShopKart
             </a>
             <button
               className="navbar-toggler"
